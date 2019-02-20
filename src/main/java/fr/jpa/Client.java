@@ -21,6 +21,12 @@ public class Client {
     @OneToMany(mappedBy="clients")
     private List<Emprunt> emprunts;
     
+	public List<Emprunt> getEmprunts() {
+		return emprunts;
+	}
+	public void setEmprunts(List<Emprunt> emprunts) {
+		this.emprunts = emprunts;
+	}
 	public int getIdc() {
 		return idc;
 	}

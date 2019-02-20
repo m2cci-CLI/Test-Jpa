@@ -36,6 +36,17 @@ public class Emprunt {
 		inverseJoinColumns= @JoinColumn(name="ID_LIV", referencedColumnName="ID"))
 		private List<Livre> livres;
 
+		
+		
+		 
+	public Client getClients() {
+			return clients;
+		}
+
+		public void setClients(Client clients) {
+			this.clients = clients;
+		}
+
 	public List<Livre> getLivres() {
 			return livres;
 		}

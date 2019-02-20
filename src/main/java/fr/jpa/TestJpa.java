@@ -39,13 +39,27 @@ public class TestJpa {
 		}
 
 		
-		TypedQuery<Emprunt> reqemplivre = ETM.createQuery("select e from Emprunt e where e.id = 2", Emprunt.class);
+		TypedQuery<Emprunt> reqemplivre = ETM.createQuery("select e from Emprunt e where e.id = 5", Emprunt.class);
         List<Emprunt> resultreqemplivre = reqemplivre.getResultList();
         for(Emprunt f : resultreqemplivre){
             List<Livre> bibliotheque = f.getLivres();
             for(Livre l : bibliotheque)
         System.out.println("l'auteur est " + l.getAuteur() + " et le titre : " + l.getTitre());    
         }
+        
+        
+        TypedQuery<Client> eleClient = ETM.createQuery("select e from Client e where e.id = 3", Client.class);
+        Client  resulte = eleClient.getSingleResult();
+        for(Emprunt f : resulte.getEmprunts()){
+            for(Livre l : f.getLivres()){
+            	System.out.println("l'auteur est " + l.getAuteur() + " et le titre : " + l.getTitre()+ resulte.getEmprunts().size()); 
+            }
+           
+        }
+      
+        
+        
+        
 
 	}
 
