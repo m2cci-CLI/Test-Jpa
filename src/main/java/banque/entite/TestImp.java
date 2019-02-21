@@ -40,9 +40,21 @@ public class TestImp {
 	        clientjack.setAdresse(adressejack);
 	       listclient.add(clientjack);
 	        //comptes
+	       
+	       LivretA compteLivretA= new LivretA();
+	       List<LivretA> listLivretA = new ArrayList<LivretA>();
+	       compteLivretA.setClient(listclient);
+	       compteLivretA.setNumero("2");
+	       compteLivretA.setSolde(564.2);
+	       compteLivretA.setTaux(45);
+	       listLivretA.add((LivretA) compteLivretA);
+	       
+	       
+	       
+	       
 	        em.persist(banque); 
 	        em.persist(clientjack);
-
+	        em.persist(compteLivretA);
 		    transaction.commit();
 
 
