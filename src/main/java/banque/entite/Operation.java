@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity @Inheritance(strategy=InheritanceType.JOINED)
 @Table(name="operation" )
-public abstract class Operation implements Serializable {
+public abstract class Operation  {
 	@Id	@Column(name = "ID") @GeneratedValue
 private int id;	
 	@Column(name = "date")

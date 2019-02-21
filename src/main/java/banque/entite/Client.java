@@ -37,6 +37,26 @@ private LocalDate dateNaissance ;
 @Embedded
 private Adresse adresse;
 
+public Adresse getAdresse() {
+	return adresse;
+}
+
+
+public void setAdresse(Adresse adresse) {
+	this.adresse = adresse;
+}
+
+
+public Banque getBanque() {
+	return banque;
+}
+
+
+public void setBanque(Banque banque) {
+	this.banque = banque;
+}
+
+
 @ManyToOne
 @JoinColumn(name="ID_c")
 private Banque banque; 

@@ -55,7 +55,7 @@ public Adresse(Integer numero, String rue, Integer codePostal, String ville) {
 }
 
 public Adresse() {
-	super();
+	
 }
 
 

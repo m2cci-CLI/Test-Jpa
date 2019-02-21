@@ -33,6 +33,9 @@ private double taux;
 	}
 	
 	
+	public LivretA() {
+		
+	}
 	
 	
 	

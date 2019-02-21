@@ -32,6 +32,11 @@ public class Virement extends Operation  {
 	}
 
 	
+	public Virement() {
+	
+	}
+
+	
 	
 
 }

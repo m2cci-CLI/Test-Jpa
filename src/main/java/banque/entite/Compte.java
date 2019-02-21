@@ -18,7 +18,7 @@ import javax.persistence.Table;
 @Entity @Inheritance(strategy=InheritanceType.JOINED)
 @Table(name="Compte" )
 
-public abstract class Compte implements Serializable {
+public abstract class  Compte   {
 	@Id	@Column(name = "ID") @GeneratedValue
 	private int id;	
 	@Column(name = "numero")
@@ -82,7 +82,7 @@ public abstract class Compte implements Serializable {
 	}
 
 	public Compte() {
-		super();
+		
 	}
 	
 	
